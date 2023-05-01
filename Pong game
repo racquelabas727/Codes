@@ -1,0 +1,49 @@
+import turtle
+import time
+
+# Set up the screen
+win = turtle.Screen()
+win.title("Pong Game")
+win.bgcolor("black")
+win.setup(width=600, height=400)
+
+# Create the paddles and ball
+left_paddle = turtle.Turtle()
+left_paddle.speed(0)
+left_paddle.shape("square")
+left_paddle.color("white")
+left_paddle.shapesize(stretch_wid=5, stretch_len=1)
+left_paddle.penup()
+left_paddle.goto(-250, 0)
+
+right_paddle = turtle.Turtle()
+right_paddle.speed(0)
+right_paddle.shape("square")
+right_paddle.color("white")
+right_paddle.shapesize(stretch_wid=5, stretch_len=1)
+right_paddle.penup()
+right_paddle.goto(250, 0)
+
+ball = turtle.Turtle()
+ball.speed(40)
+ball.shape("circle")
+ball.color("white")
+ball.penup()
+ball.goto(0, 0)
+ball.dx = 2
+ball.dy = 2
+
+# Move the paddles
+def left_paddle_up():
+    y = left_paddle.ycor()
+    y += 20
+    left_paddle.sety(y)
+
+def left_paddle_down():
+    y = left_paddle.ycor()
+    y -= 20
+    left_paddle.sety(y)
+
+def right_paddle_up():
+    y = right_paddle.ycor()
+    y +=
